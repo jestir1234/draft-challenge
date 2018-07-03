@@ -29,9 +29,14 @@ body {
   align-items: center;
 }
 
+#artist-title {
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+
 #artist-img {
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
   border-radius: 50%;
 }
 
@@ -99,6 +104,8 @@ body {
   border-radius: 500px;
   transition: padding .2s;
   outline: none;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
 .related-artist-see-btn:hover {
@@ -156,6 +163,8 @@ body {
   transition: padding .2s;
   outline: none;
   width: 75px;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
 .play-button-active {
@@ -170,6 +179,8 @@ body {
   transition: padding .2s;
   outline: none;
   width: 75px;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
 .play-button-paused:hover {
@@ -212,6 +223,12 @@ body {
   .artist-content-subsection {
     width: 100%;
   }
+
+  #artist-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
 
 }
 
