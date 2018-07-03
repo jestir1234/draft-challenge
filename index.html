@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+<body>
+  <section class="header">
+    <h1>Spotify</h1>
+  </section>
+
+  <div class="content-container">
+
+    <section class="artist-block">
+
+      <h1 id="artist-title"></h1>
+
+      <img id="artist-img"/>
+
+      <div class="artist-followers-container">
+        <span>Followers:</span>
+        <span id="artist-followers"></span>
+      </div>
+        <a id="artist-open-link">
+          <button id="artist-open-button">OPEN</button>
+        </a>
+      </section>
+
+      <section class="artist-content">
+
+        <div class="artist-content-subsection">
+          <h2>Related Artists</h2>
+          <div id="related-artists-group-container">
+          </div>
+        </div>
+
+        <div class="artist-content-subsection">
+          <h2>Top Tracks</h2>
+          <div id="artist-top-tracks-container"></div>
+        </div>
+      </section>
+
+  </div>
+
+  <script src="scripts/artist.js"></script>
+  <script src="scripts/fetch.js"></script>
+  <script src="scripts/load.js"></script>
+  <script src="scripts/oAuth.js"></script>
+</body>
+</html>

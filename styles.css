@@ -1,0 +1,232 @@
+
+body {
+  background: linear-gradient(to bottom right, #f442a7, #11010a);
+  background-repeat: no-repeat;
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 15px 5px 15px;
+}
+
+.header > h1 {
+  letter-spacing: 1px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-block {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#artist-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.artist-followers-container {
+  display: flex;
+  margin: 14px 0 0;
+}
+
+#artist-followers {
+  margin-left: 10px;
+}
+
+#artist-open-button {
+  font-family: inherit;
+  font-weight: 400;
+  color: white;
+  margin: 8px 0;
+  background-color: #1db954;
+  border: none;
+  padding: 11px 44px;
+  border-radius: 500px;
+  transition: padding .2s;
+}
+
+#artist-open-button:hover {
+  padding: 13px 46px;
+  cursor: pointer;
+}
+
+#related-artists-group-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.related-artist-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  width: 100px;
+}
+
+.related-artist-title {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 200;
+}
+
+.related-artist-img {
+  height: 75px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.related-artist-see-btn {
+  font-family: inherit;
+  font-weight: 400;
+  color: white;
+  margin: 8px 0;
+  background-color: #1db954;
+  border: none;
+  padding: 5px 22px;
+  border-radius: 500px;
+  transition: padding .2s;
+  outline: none;
+}
+
+.related-artist-see-btn:hover {
+  transition: padding .2s;
+   padding: 7px 25px;
+  cursor: pointer;
+}
+
+.artist-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.artist-content-subsection {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+  max-width: 600px;
+}
+
+#artist-top-tracks-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.track-container {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5px 0 5px;
+  transition: .3s;
+  font-weight: 200;
+}
+
+.track-container:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  background: rgba(34, 18, 18, 0.5);
+}
+
+.play-button-paused {
+  font-family: inherit;
+  font-weight: 400;
+  color: white;
+  margin: 8px 0;
+  background-color: #1db954;
+  border: none;
+  padding: 5px 22px;
+  border-radius: 500px;
+  transition: padding .2s;
+  outline: none;
+  width: 75px;
+}
+
+.play-button-active {
+  font-family: inherit;
+  font-weight: 400;
+  color: white;
+  margin: 8px 0;
+  background-color: #747474;
+  border: none;
+  padding: 5px 22px;
+  border-radius: 500px;
+  transition: padding .2s;
+  outline: none;
+  width: 75px;
+}
+
+.play-button:hover {
+  cursor: pointer;
+  padding: 8px 24px;
+  transition: padding .2s;
+}
+
+.play-button:active {
+  padding: 5px 22px;
+}
+
+/* .play-button {
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 12px solid white;
+  border-right: none;
+  background: transparent;
+  outline: none;
+}
+
+.play-button:hover{
+  cursor: pointer;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid white;
+}
+
+.play-button:active {
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 11px solid white;
+} */
+
+.iframe-container {
+  height: 0;
+  width: 0;
+  border: none;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+/* MEDIA QUERIES  */
+
+
+@media screen and (max-width: 768px) {
+  .artist-content {
+    flex-direction: column;
+  }
+}
+
+/* IPAD */
+@media screen and (max-width: 768px) {
+  .artist-content {
+    flex-direction: column;
+  }
+}
