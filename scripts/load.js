@@ -1,5 +1,4 @@
 const load = (artistId = SEED_ARTIST) => {
-  console.log("loading artist", artistId);
   const params = getHashParams();
 
   const access_token =
@@ -13,7 +12,6 @@ const load = (artistId = SEED_ARTIST) => {
         fetchRelatedArtist({ access_token, artistId }),
         fetchArtistTopTracks({ access_token, artistId })
       ]).then(data => {
-        console.log(data);
         return renderArtist({
           artist: data[0],
           relatedArtists: data[1],
