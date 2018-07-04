@@ -2,7 +2,7 @@
 
 ### Running the app
 
-Run `node server.js` from the root directory and navigate to `http://localhost:8888/`.
+Clone the repo and cd into `/draft-challenge`. Run `node server.js` from the root directory and navigate to `http://localhost:8888/`.
 
 ### Structure
 ```
