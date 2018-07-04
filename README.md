@@ -2,7 +2,10 @@
 
 ### Running the app
 
-Clone the repo and cd into `/draft-challenge`. Run `node server.js` from the root directory and navigate to `http://localhost:8888/`.
+- Clone the repo.
+- `cd` into `/draft-challenge`.
+- Run `node server.js` from the root directory.
+- Navigate to `http://localhost:8888/`.
 
 ### Structure
 ```
@@ -12,8 +15,8 @@ entities/
 scripts/
     fetch.js
     load.js
-index.html
 server.js
+index.html
 styles.css
 ```
 
