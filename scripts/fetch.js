@@ -1,5 +1,3 @@
-const SEED_ARTIST = "4dpARuHxo51G3z768sgnrY";
-
 const fetchArtist = async ({ access_token, artistId }) => {
   let content = await fetch(`https://api.spotify.com/v1/artists/${artistId}`, {
     headers: {
@@ -52,15 +50,4 @@ const fetchRelatedArtist = async ({ access_token, artistId }) => {
   }
 
   return contentJSON;
-};
-
-const getHashParams = () => {
-  const hashParams = {};
-  let e,
-    r = /([^&;=]+)=?([^&;]*)/g,
-    q = window.location.hash.substring(1);
-  while ((e = r.exec(q))) {
-    hashParams[e[1]] = decodeURIComponent(e[2]);
-  }
-  return hashParams;
 };

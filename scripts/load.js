@@ -1,21 +1,34 @@
+const SEED_ARTIST = "4dpARuHxo51G3z768sgnrY";
+
 const renderArtist = ({ artist, relatedArtists, topTracks }) => {
   let currentArtist = new Artist(artist, relatedArtists, topTracks);
   currentArtist.renderArtistBlock();
 };
 
 const authorize = () => {
-  var client_id = "454833ff2e1f41e7856ab20e780d0e68";
-  var redirect_uri = "http://localhost:8888/";
+  let client_id = "454833ff2e1f41e7856ab20e780d0e68";
+  let redirect_uri = "http://localhost:8888/";
 
-  var scope = "user-read-private user-read-email";
+  let scope = "user-read-private user-read-email";
 
-  var url = "https://accounts.spotify.com/authorize";
+  let url = "https://accounts.spotify.com/authorize";
   url += "?response_type=token";
   url += "&client_id=" + encodeURIComponent(client_id);
   url += "&scope=" + encodeURIComponent(scope);
   url += "&redirect_uri=" + encodeURIComponent(redirect_uri);
 
   window.location = url;
+};
+
+const getHashParams = () => {
+  const hashParams = {};
+  let e,
+    r = /([^&;=]+)=?([^&;]*)/g,
+    q = window.location.hash.substring(1);
+  while ((e = r.exec(q))) {
+    hashParams[e[1]] = decodeURIComponent(e[2]);
+  }
+  return hashParams;
 };
 
 const load = (artistId = SEED_ARTIST) => {

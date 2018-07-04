@@ -1,18 +1,18 @@
-var http = require("http");
-var fs = require("fs");
-var path = require("path");
+let http = require("http");
+let fs = require("fs");
+let path = require("path");
 
 http
   .createServer(function(request, response) {
     console.log("request ", request.url);
 
-    var filePath = "." + request.url;
+    let filePath = "." + request.url;
     if (filePath == "./") {
       filePath = "./index.html";
     }
 
-    var extname = String(path.extname(filePath)).toLowerCase();
-    var mimeTypes = {
+    let extname = String(path.extname(filePath)).toLowerCase();
+    let mimeTypes = {
       ".html": "text/html",
       ".js": "text/javascript",
       ".css": "text/css",
@@ -29,7 +29,7 @@ http
       ".svg": "application/image/svg+xml"
     };
 
-    var contentType = mimeTypes[extname] || "application/octet-stream";
+    let contentType = mimeTypes[extname] || "application/octet-stream";
 
     fs.readFile(filePath, function(error, content) {
       if (error) {
