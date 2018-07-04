@@ -1,3 +1,6 @@
+html {
+  background: black;
+}
 
 body {
   background: linear-gradient(to bottom right, #f442a7, #11010a);
@@ -5,6 +8,7 @@ body {
   color: white;
   font-family: sans-serif;
   letter-spacing: 1px;
+  min-height: 100vh;
 }
 
 .header {
@@ -22,7 +26,7 @@ body {
   flex-direction: column;
 }
 
-.artist-block {
+#artist-block {
   padding: 20px;
   display: flex;
   flex-direction: column;

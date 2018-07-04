@@ -22,7 +22,7 @@ class Track {
   }
 
   clearOtherAudio() {
-    let iframes = document.getElementsByTagName("iframe");
+    const iframes = document.getElementsByTagName("iframe");
     for (let i = 0; i < iframes.length; i++) {
       if (iframes[i].id !== `${this.audio.id}`) {
         iframes[i].src = "";
