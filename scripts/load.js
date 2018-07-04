@@ -3,6 +3,8 @@ const SEED_ARTIST = "4dpARuHxo51G3z768sgnrY";
 const renderArtist = ({ artist, relatedArtists, topTracks }) => {
   let currentArtist = new Artist(artist, relatedArtists, topTracks);
   currentArtist.renderArtistBlock();
+  currentArtist.renderRelatedArtistsBlock();
+  currentArtist.renderTopTracksBlock();
 };
 
 const authorize = () => {
