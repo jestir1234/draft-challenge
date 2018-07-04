@@ -6,6 +6,7 @@
 - `cd` into `/draft-challenge`.
 - Run `node server.js` from the root directory.
 - Navigate to `http://localhost:8888/`.
+- Login with Spotify Credentials.
 
 ### Structure
 ```
