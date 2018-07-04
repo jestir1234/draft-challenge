@@ -3,9 +3,29 @@ class Track {
     this.id = track.id;
     this.songTitle = track.name;
     this.previewUrl = track.preview_url;
+
+    // Create audio iframe
     this.audio = document.createElement("iframe");
+    this.audio.className = "iframe-container";
+    this.audio.id = `audio-${this.id}`;
+
+    // Create track container
     this.container = document.createElement("div");
+    this.container.className = "track-container";
+    this.container.innerHTML = `
+      <span>${this.songTitle}</span>
+    `;
+
+    //Create play button
     this.playBtn = document.createElement("button");
+    this.playBtn.innerHTML = "Play";
+    this.playBtn.className = "play-button-paused";
+    this.playBtn.id = `play-btn-${this.id}`;
+    this.playBtn.addEventListener("click", this.playTrack.bind(this));
+
+    // Append play button and iframe to track container
+    this.container.appendChild(this.playBtn);
+    this.container.appendChild(this.audio);
   }
 
   playTrack() {
@@ -36,22 +56,6 @@ class Track {
   }
 
   renderTrack() {
-    this.container.className = "track-container";
-    this.audio.className = "iframe-container";
-    this.audio.id = `audio-${this.id}`;
-
-    this.container.innerHTML = `
-      <span>${this.songTitle}</span>
-    `;
-
-    this.playBtn.innerHTML = "Play";
-    this.playBtn.className = "play-button-paused";
-    this.playBtn.id = `play-btn-${this.id}`;
-
-    this.playBtn.addEventListener("click", this.playTrack.bind(this));
-
-    this.container.appendChild(this.playBtn);
-    this.container.appendChild(this.audio);
     return this.container;
   }
 }
