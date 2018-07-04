@@ -27,5 +27,5 @@ styles.css
 
 ### Entities
 
-- `artist.js` contains the `Artist` class and renders Artist related components. The `renderArtistBlock` method renders the **Related Artists** and **Top Tracks**.
-- `track.js` contains the `Track` class, which handles track item rendering and playing logic.
+- `artist.js` contains the `Artist` class with methods to render Artist and Related Artists.
+- `track.js` contains the `Track` class, which handles rendering tracks and playing logic.
